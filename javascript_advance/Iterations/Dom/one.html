@@ -1,0 +1,66 @@
+<!-- What is dOM and how it works?? -->
+ <!-- The Document Object Model (DOM) in JavaScript
+The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects that can be accessed, modified, and manipulated using JavaScript. The DOM allows JavaScript to dynamically interact with the contents, structure, and style of a webpage. -->
+<!-- Working -->
+ <!-- How the DOM Works:
+When a webpage is loaded, the browser creates a DOM tree based on the HTML structure. JavaScript can then use this DOM tree to:
+
+Access Elements: Select specific elements or groups of elements (e.g., by id, class, tag name).
+Modify Content: Change the text or HTML content of elements.
+Change Style: Adjust CSS styles dynamically.
+Handle Events: Attach event listeners to elements to respond to user actions (e.g., clicks, typing).
+Create and Remove Elements: Dynamically add or remove elements from the webpage. -->
+
+<!-- Consider the following simple HTML document: -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example</title>
+  </head>
+  <body>
+    <h1>Hello, Yogendra!</h1>
+    <p>This is a simple paragraph.</p>
+  </body>
+</html>
+
+<!-- The corresponding DOM tree would look like this: -->
+ <!--
+ Document
+ └── html
+     ├── head
+     │   └── title
+     │       └── "DOM Example"
+     └── body
+         ├── h1
+         │   └── "Hello, Yogendra!"
+         └── p
+             └── "This is a simple paragraph."
+ -->
+
+
+ <!-- Common JavaScript DOM Methods:
+* Selecting Elements:
+
+==> document.getElementById("id"): Selects an element by its id.
+==> document.getElementsByClassName("className"): Selects all elements with a specific class.
+==> document.getElementsByTagName("tagName"): Selects all elements with a specific tag name.
+==> document.querySelector("selector"): Selects the first element that matches a CSS selector.
+==> document.querySelectorAll("selector"): Selects all elements that match a CSS selector.
+
+* Manipulating Content and Attributes:
+
+==> element.textContent: Gets or sets the text content of an element.
+==> element.innerHTML: Gets or sets the HTML content inside an element.
+==> element.setAttribute("attribute", "value"): Sets an attribute for an element.
+==> element.removeAttribute("attribute"): Removes an attribute from an element.
+
+* Creating and Removing Elements:
+
+==> document.createElement("tagName"): Creates a new element.
+==> parentElement.appendChild(newElement): Adds a new child element to a parent.
+==> parentElement.removeChild(childElement): Removes a child element from a parent.
+
+* Handling Events:
+
+==> element.addEventListener("event", callbackFunction): Attaches an event handler to an element (e.g., clicks, mouse movements).
+==> element.removeEventListener("event", callbackFunction): Removes an event handler from an element. -->
