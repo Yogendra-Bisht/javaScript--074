@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DOM Manipulation Practice</h1>
+
+    <div class="container" id="content">
+        <p>This is a paragraph. You can modify or replace this text using JavaScript.</p>
+        <p>Second paragraph for additional practice.</p>
+        <ul id="itemList" class="listclass">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button id="addItemBtn">Add Item</button>
+        <button id="changeTextBtn">Change Text</button>
+    </div>
+
+    <div class="container" id="formSection">
+        <h2>Form Section</h2>
+        <form id="demoForm">
+            <label for="nameInput">Enter your name:</label>
+            <input type="text" id="nameInput" placeholder="Your name...">
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+        <p id="formResponse"></p>
+    </div>
+
+    <script>
+        // Ok so lets start the DOM manipulation 
+        // 1. Change the content of first paragraph
+        document.querySelector(".container").firstElementChild.innerHTML="this is the changed text"
+        // example="Hello this is the changed paragraph"
+        // Done 
+        // 2.
+        let click = document.getElementById("submitBtn").addEventListener("click", function(){
+            document.getElementById("nameInput").value="click Done"
+
+
+        })
+        
+        let child = document.querySelector(".listclass").firstElementChild.innerHTML= "This is item 1"
+        console.log(child);
+        // console.log(document.querySelector(".listclass").firstElementChild.innerHTML);
+        
+
+        
+    </script>
+
+</body>
+</html>

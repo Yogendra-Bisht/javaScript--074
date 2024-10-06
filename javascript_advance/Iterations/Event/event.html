@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Events Practice</h1>
+
+    <h2>Click Events</h2>
+    <button id="clickButton">Click Me</button>
+    <button id="doubleClickButton">Double Click Me</button>
+    <p id="clickResult"></p>
+
+    <h2>Mouse Events</h2>
+    <div id="hoverBox" style="width: 200px; height: 100px; background-color: lightblue;">
+        Hover Over Me!
+    </div>
+    <p id="hoverResult"></p>
+
+    <h2>Keyboard Events</h2>
+    <input type="text" id="keyInput" placeholder="Type something..." />
+    <p id="keyResult"></p>
+
+    <h2>Form Events</h2>
+    <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formResult"></p>
+
+    <script>
+        // Click Event
+        // document.getElementById("clickButton").addEventListener("click", function() {
+        //     document.getElementById("clickResult").textContent = "Button was clicked!";
+        // });
+
+        // // Double Click Event
+        // document.getElementById("doubleClickButton").addEventListener("dblclick", function() {
+        //     document.getElementById("clickResult").textContent = "Button was double-clicked!";
+        // });
+
+        // // Mouse Hover Event
+        // document.getElementById("hoverBox").addEventListener("mouseover", function() {
+        //     document.getElementById("hoverResult").textContent = "Mouse is hovering!";
+        // });
+
+        // document.getElementById("hoverBox").addEventListener("mouseout", function() {
+        //     document.getElementById("hoverResult").textContent = "Mouse left the area.";
+        // });
+
+        // // Keyboard Event
+        // document.getElementById("keyInput").addEventListener("keydown", function(event) {
+        //     document.getElementById("keyResult").textContent = "Key pressed: " + event.key;
+        // });
+
+        // // Form Submit Event
+        // document.getElementById("myForm").addEventListener("submit", function(event) {
+        //     event.preventDefault();  // Prevent form from submitting
+        //     var name = document.getElementById("nameInput").value;
+        //     document.getElementById("formResult").textContent = "Form submitted! Hello, " + name;
+        // });
+
+        document.getElementById("clickButton").addEventListener("click", function(e){
+            document.getElementById("clickResult").innerHTML="Button clicked"
+        });
+
+        document.getElementById("doubleClickButton").addEventListener("dblclick",function(e){
+            document.getElementById("clickResult").innerHTML="Button double clicked"
+        })
+        document.getElementById("hoverBox").addEventListener("mouseover",function(e){
+            document.getElementById("hoverResult").innerHTML="cursor inside the text area"
+            // event.preventDefault();
+           
+        })
+        document.getElementById("hoverBox").addEventListener("mouseout",function(e){
+            document.getElementById("hoverResult").innerHTML="cursor ouside the text area"
+            // event.preventDefault();
+           
+        })
+        document.getElementById("keyInput").addEventListener("keydown", function(e){
+            document.getElementById("keyResult").innerHTML= `key is ${e.key}`
+            console.log(e);
+            
+        })
+        document.getElementById("myForm").addEventListener("submit",function(e){
+            event.preventDefault();
+            let name = document.getElementById("nameInput").value
+            document.getElementById("formResult").innerHTML=`Hello ${name}`
+        })
+        let paragraph = document.createElement("p")
+        element.innerHTML="created paragraph"
+        document.body.appendChild(paragraph);
+        // document.body.removeElement("p");
+        // document.removeChild("p");
+        paragraph.remove();
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="task-list">
+        <li>Buy groceries</li>
+        <li>Walk the dog</li>
+      </ul>
+      
+</body>
+<script>
+    // Ok so we have to create a function which add an element in the given to do list
+    function addElement(element){
+        let li=document.createElement("li")
+        li.innerHTML=`${element}`
+        document.querySelector(".task-list").appendChild(li);
+        console.log(document.querySelector(".task-list").innerHTML);
+        
+
+    }
+    // addElement("Do workout")
+    addElement("Finished homework")
+    addElement("Do workout")
+    addElement("Do workout with friends")
+</script>
+</html>

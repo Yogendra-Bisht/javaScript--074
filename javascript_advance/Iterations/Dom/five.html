@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: gray;">
+    <div class="firstdiv">
+        <p id="firstp">Document object model</p>
+    </div>
+    <div class="seconddiv">
+        <p id="secondp">Second div paragraph</p>
+        <div id="thirddiv">
+            <h1 id="firsth">This is first heading</h1>
+        </div>
+    </div>
+    <ul class="language">
+        <li>Java</li>
+        <li>Python</li>
+        
+    </ul>
+    
+</body>
+<script>
+    // console.log("hello user");
+    function addlanguage(langname){
+        let li = document.createElement("li");
+        li.innerHTML=`${langname}`;
+        document.querySelector(".language").appendChild(li)
+
+
+    
+
+    };
+    addlanguage("javascript")
+
+
+
+
+    
+</script>
+</html>
