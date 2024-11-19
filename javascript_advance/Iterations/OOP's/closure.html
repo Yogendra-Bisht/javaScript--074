@@ -1,0 +1,44 @@
+<!-- This is about lexical scoping and  closure  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lexical scoping and Closure </title>
+</head>
+<body style="background-color: gray;">
+   <button id="green">Green</button>
+   <button id="yellow">Yellow</button>
+   <!-- <style></style> -->
+   
+</body>
+<script>
+   function outer(){
+     let outerVar=5;
+     function inner(){
+        console.log(`outer var ${outerVar} accessed inside inner function `);
+        let innerVar =10;
+        
+     }
+     inner();
+     // console.log(`inner variable ${innerVar} accessed outside inner`);
+     
+   }
+   outer();
+  //  So it was lexical scoping 
+  // It means that if we define a function and some more function inside the parent function then the scope of perent function also can be accesesd by children function but vise-versa is not possible , also one more important thing that siblings cannot share their scope
+  //This is known as lexical scoping
+  
+  // Now lets talk about closure in javascript
+  // Creating a function inside a function
+  function example(){
+     function ex(){
+        console.log("Hello from inner");
+        
+     }
+     return ex;
+     ex();
+  }
+  example();
+</script>
+</html>
